@@ -1,0 +1,17 @@
+service: S3Sqlite3Service
+
+
+provider:
+  name: aws
+  region: eu-north-1
+ 
+layers:
+  S3Sqlite3:
+    path: ../s3_sqlite3 
+    name: GraspS3Sqlite3Layer
+    description: Sqlite3 Database Management in S3
+    compatibleRuntimes: 
+      - python3.8
+      - python3.7
+    allowedAccounts: 
+      - '*'
